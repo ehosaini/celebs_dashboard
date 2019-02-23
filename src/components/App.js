@@ -1,27 +1,33 @@
 import React from 'react'
 
-import CelebCard from './CelebCard'
 import CelebDetails from './CelebDetails'
-import CelebList from './CelebDetails'
+import CelebList from './CelebList'
 
 import celebrities from '../api/celebrities'
 
 class App extends React.Component {
   
+  constructor(props) {
+      super(props)
+      this.state = {
+          celebs:[]
+        }
+  } 
+
   fetchCelebsInfo = async () => {
     const celebs = await celebrities.get('/celebrities')
+    this.setState({celebs: celebs.data})
   }
 
   componentDidMount () {
-
+    this.fetchCelebsInfo()
   }
 
   render () {
     return (
       <div>
-        <CelebCard />
         <CelebDetails />
-        <CelebList />
+        <CelebList celebsList={this.state.celebs}/>
       </div>
     )
   }
