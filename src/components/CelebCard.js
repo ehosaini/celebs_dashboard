@@ -6,13 +6,13 @@ import { fetchCeleb } from '../actions'
 
 class CelebCard extends React.Component {
 
-  onCelebSelect = (id) => {
-    this.props.fetchCeleb(id)
+  onCelebSelect = (celeb) => {
+    this.props.fetchCeleb(celeb.id)
   }
 
   render () {
     return (
-      <div onClick={this.onCelebSelect(this.props.celebrity.id)}>
+      <div onClick={() => this.onCelebSelect(this.props.celebrity)}>
         {this.props.celebrity.name}
       </div>
     )
