@@ -11,7 +11,7 @@ class App extends React.Component {
 
   handleCelebListError () {
     if (this.props.celebListError) {
-      return <div> Server failed to respond, please try later.</div>
+      return <div> Server failed to respond, please try again later.</div>
     }
     return <CelebList />
   }

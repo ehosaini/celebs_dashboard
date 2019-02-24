@@ -1,4 +1,9 @@
 import celebrities from '../api/celebrities'
+import { FETCH_CELEBS,
+  FETCH_CELEB,
+  FETCH_CELEBS_ERROR,
+  FETCH_CELEB_ERROR
+} from '../config'
 
 export const fetchCelebs = () => async dispatch => {
   try {
@@ -8,10 +13,10 @@ export const fetchCelebs = () => async dispatch => {
       throw Error('No data was returned in the response body')
     }
 
-    dispatch({ type: 'FETCH_CELEBS', payload: response.data })
+    dispatch({ type: FETCH_CELEBS, payload: response.data })
   } catch (err) {
     console.log(err)
-    dispatch({ type: 'FETCH_CELEBS_ERROR', payload: 'ERROR' })
+    dispatch({ type: FETCH_CELEBS_ERROR, payload: 'ERROR' })
   }
 }
 
@@ -23,9 +28,9 @@ export const fetchCeleb = id => async dispatch => {
       throw Error('No data was returned in the response body')
     }
 
-    dispatch({ type: 'FETCH_CELEB', payload: response.data })
+    dispatch({ type: FETCH_CELEB, payload: response.data })
   } catch (err) {
     console.log(err)
-    dispatch({ type: 'FETCH_CELEB_ERROR' })
+    dispatch({ type: FETCH_CELEB_ERROR })
   }
 }
