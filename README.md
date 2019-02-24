@@ -1,21 +1,49 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## App Description: 
+An dashboard that displays a list of celebrities and their info.
+
+## Initial setup:
+1 - Clone the repo then navigate to the project directory.
+
+2 - In the `src/config/config.js` assign the root api route to CELEBS_INFO_URL. This variable is used by `src/api/celebrities.js` to get info about the artists.
+
+3 - Runs the app in the development mode by entering `npm start` in the terminal<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
+## Navigating the App and App Routes:
+ - Main route `/`: Once the app loads, click on the a celebrity name on the left-side list to see their details.
+ - Celebrity details `/:id`:  Alternative enter a celeb's `id` like `/1` to see their detials. 
+
+## Assumptions:
+Payloads provided by the endpoints are as following
+
+1 - `/` or `/artists`: an array of objects each formatted like so:
+```json
+{
+    "id": 1,
+    "name": "quentin",
+    "middleName": "jerome",
+    "lastName": "tarantino",
+    "occupation": "director",
+    "dateOfBirth": "03/27/1963",
+    "age": 56,
+    "placeOfBirth": "knoxville",
+    "pictureUrl": "url-for-the-picture"
+},
+```
+2 - `/artists/:artistID`: a single object for the specified id formatted like above
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
