@@ -8,7 +8,7 @@ class CelebList extends React.Component {
   renderCelebsList () {
     return this.props.celebsList.map(celeb => {
       return (
-        <div className="ui relaxed list" key={celeb.id}>
+        <div className='ui relaxed list' key={celeb.id}>
           <CelebCard celebrity={celeb} />
         </div>
       )
