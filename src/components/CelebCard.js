@@ -21,7 +21,7 @@ class CelebCard extends React.Component {
   render () {
     return (
       <div className="item" onClick={() => this.onCelebSelect(this.props.celebrity)}>
-          <img className="ui avatar image" src={this.props.celebrity.pictureUrl}></img>
+          <img className="ui avatar image" src={this.props.celebrity.pictureUrl} alt="celeb_avatar"></img>
           <div className="content">
             <a className="header">{this.makeFullName()}</a>
             <div className="description">{this.capitalize(this.props.celebrity.occupation)}</div>

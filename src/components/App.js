@@ -5,10 +5,6 @@ import CelebDetails from './CelebDetails'
 import CelebList from './CelebList'
 
 class App extends React.Component {
-  componentDidMount () {
-
-  }
-
   handleCelebListError () {
     if (this.props.celebListError) {
       return <div> Server failed to respond, please try again later.</div>
@@ -34,7 +30,6 @@ class App extends React.Component {
             {this.handleCelebListError()}
           </div>
           <div className='eight wide column center aligned'>
-            {/* <CelebDetails celebId={this.props.celebId} /> */}
             {this.handleCelebDetailsError()}
           </div>
         </div>

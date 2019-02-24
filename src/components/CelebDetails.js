@@ -26,7 +26,7 @@ class CelebDetails extends React.Component {
     return (
       <div className='ui card'>
         <div className='image'>
-          <img src={this.props.celeb.pictureUrl} />
+          <img src={this.props.celeb.pictureUrl} alt="celeb_photo"/>
         </div>
         <div className='content'>
           <a className='header'>{this.capitalize(this.props.celeb.name)}</a>

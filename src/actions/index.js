@@ -7,7 +7,7 @@ import { FETCH_CELEBS,
 
 export const fetchCelebs = () => async dispatch => {
   try {
-    const response = await celebrities.get('/celebrities')
+    const response = await celebrities.get('/artists')
 
     if (!response.data.length) {
       throw Error('No data was returned in the response body')
@@ -22,7 +22,7 @@ export const fetchCelebs = () => async dispatch => {
 
 export const fetchCeleb = id => async dispatch => {
   try {
-    const response = await celebrities.get(`/celebrities/${id}`)
+    const response = await celebrities.get(`/artists/${id}`)
 
     if (!Object.keys(response.data).length) {
       throw Error('No data was returned in the response body')

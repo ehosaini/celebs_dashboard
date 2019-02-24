@@ -1,19 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## App Description: 
-An dashboard that displays a list of celebrities and their info.
+A dashboard that displays a list of artists and their info.
 
 ## Initial setup:
-1 - Clone the repo then navigate to the project directory.
+1 - Clone the repo, then navigate to the project directory.
 
-2 - In the `src/config/config.js` assign the root api route to CELEBS_INFO_URL. This variable is used by `src/api/celebrities.js` to get info about the artists.
+2 - In the `src/config/config.js` assign the a route that servers data to CELEBS_INFO_URL. This variable is used by `src/api/celebrities.js` to get info about the artists.
 
 3 - Runs the app in the development mode by entering `npm start` in the terminal<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 ## Navigating the App and App Routes:
- - Main route `/`: Once the app loads, click on the a celebrity name on the left-side list to see their details.
- - Celebrity details `/:id`:  Alternative enter a celeb's `id` like `/1` to see their detials. 
+ - Main route `/`: Once the app loads, click on a celebrity name on the left-side list to see their details.
+ - Celebrity details `/:id`:  Alternatively enter a celebrity's `id` like `/1` or `/2` to see their detials. 
 
 ## Assumptions:
 Payloads provided by the endpoints are as following
