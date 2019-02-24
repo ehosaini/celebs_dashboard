@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import CelebDetails from './CelebDetails'
 import CelebList from './CelebList'
@@ -12,10 +13,16 @@ class App extends React.Component {
     return (
       <div>
         <CelebList />
-        <CelebDetails />
+        <CelebDetails celebId={this.props.celebId} />
       </div>
     )
   }
 }
 
-export default App
+const mapStateToProps = (state, ownProps) => {
+  return {
+    celebId: ownProps.match.params.id
+  }
+}
+
+export default connect(mapStateToProps)(App)
