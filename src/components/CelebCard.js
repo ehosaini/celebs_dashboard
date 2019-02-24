@@ -10,10 +10,22 @@ class CelebCard extends React.Component {
     this.props.fetchCeleb(celeb.id)
   }
 
+  makeFullName(){
+    return this.capitalize(this.props.celebrity.name) + ' ' + this.capitalize(this.props.celebrity.lastName)
+  }
+
+  capitalize(str) {
+    return str && str.charAt(0).toUpperCase() + str.slice(1)
+  }
+
   render () {
     return (
-      <div onClick={() => this.onCelebSelect(this.props.celebrity)}>
-        {this.props.celebrity.name}
+      <div className="item" onClick={() => this.onCelebSelect(this.props.celebrity)}>
+          <img className="ui avatar image" src="/images/avatar/small/daniel.jpg"></img>
+          <div className="content">
+            <a className="header">{this.makeFullName()}</a>
+            <div className="description">{this.capitalize(this.props.celebrity.occupation)}</div>
+          </div>
       </div>
     )
   }

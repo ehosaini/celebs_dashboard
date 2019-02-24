@@ -20,14 +20,13 @@ const store = createStore(
 // Add routing
 const RoutedApp = () => {
   return (
-    <div>
+ 
       <BrowserRouter >
         <div>
           <Route path='/' exact component={App} />
           <Route path='/:id' exact component={App} />
         </div>
       </BrowserRouter>
-    </div>
   )
 }
 

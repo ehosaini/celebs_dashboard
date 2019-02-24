@@ -8,7 +8,7 @@ class CelebList extends React.Component {
   renderCelebsList () {
     return this.props.celebsList.map(celeb => {
       return (
-        <div key={celeb.id}>
+        <div className="ui relaxed list" key={celeb.id}>
           <CelebCard celebrity={celeb} />
         </div>
       )
@@ -20,11 +20,7 @@ class CelebList extends React.Component {
   }
 
   render () {
-    return (
-      <div>
-        {this.renderCelebsList()}
-      </div>
-    )
+    return this.renderCelebsList()
   }
 }
 

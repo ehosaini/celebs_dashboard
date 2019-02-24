@@ -11,9 +11,15 @@ class App extends React.Component {
 
   render () {
     return (
-      <div>
-        <CelebList />
-        <CelebDetails celebId={this.props.celebId} />
+      <div className="ui container" style={{margin:'5vh'}}>
+        <div className="ui middle aligned two column centered grid">
+            <div className="five wide column">
+                <CelebList />
+            </div>
+            <div className="eight wide column center aligned">
+                <CelebDetails celebId={this.props.celebId} />
+            </div>
+        </div>
       </div>
     )
   }
